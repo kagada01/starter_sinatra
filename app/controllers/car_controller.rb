@@ -16,10 +16,16 @@ class CarController < Sinatra::Base
     # byebug
     owner_id = params["owner"]
     owner = Owner.find(owner_id)
-    make = params["make"]
-    model = params["model"]
-    year = params[year.to_i]
-    redirect "cars/#{car.id}"
+    make = params["cars"]["make"]
+    model = params["cars"]["model"]
+    year = params["cars"]["year"].to_i
+    new_car = Car.create(make: make ,
+                         model: model,
+                         year: year,
+                         owner_id: owner_id
+                         )
+                         byebug
+    redirect "cars/#{@car.id}"
   end
 
   get '/cars/:id' do
