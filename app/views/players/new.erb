@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <form action="/players" method="POST">
+      <label for="name">Name: </label>
+      <input type="text" name="players[name]">
+
+      <label for="team">Team:</label>
+      <select name="players[team_id]">
+          <% Team.all.each do |team| %>
+          <option value="<%=team.id%>"><%=team.name%></option>
+          <% end %>
+      </select>
+
+      <label for="college">College: </label>
+      <input type="text" name="players[college]">
+
+      <label for="draft_year">Draft Year: </label>
+      <input type="text" name="players[draft_year]">
+
+      <label for="avg_points">PPG: </label>
+      <input type="text" name="players[avg_points]">
+
+      <input type="submit">
+    </form>
+
+  </body>
+</html>

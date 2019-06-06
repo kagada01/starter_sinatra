@@ -10,17 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_05_161107) do
+ActiveRecord::Schema.define(version: 2019_06_06_143007) do
 
-  create_table "cars", force: :cascade do |t|
-    t.string "make"
-    t.string "model"
-    t.integer "year"
-    t.integer "owner_id"
+  create_table "players", force: :cascade do |t|
+    t.string "name"
+    t.string "college"
+    t.string "draft_year"
+    t.string "avg_points"
+    t.integer "team_id"
   end
 
-  create_table "owners", force: :cascade do |t|
+  create_table "teams", force: :cascade do |t|
     t.string "name"
+    t.string "location"
+    t.string "coach"
   end
 
 end

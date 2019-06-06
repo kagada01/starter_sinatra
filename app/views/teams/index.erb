@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% @teams.each do |team| %>
+    <%= "Name: " + team.name %><br>
+    <%="City: " + team.location %><br>
+    <%="Coach: " + team.coach %><br>
+    <br>
+    <% end %>
+  </body>
+</html>

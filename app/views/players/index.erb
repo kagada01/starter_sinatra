@@ -5,8 +5,9 @@
     <title></title>
   </head>
   <body>
-    <% @cars.each do |car| %>
-      <%= car.make %> 
+    <% @players.each do |player| %>
+    <%= "Name: " + player.name%><br>
+    <%="PPG: " + player.avg_points + ", "%><br>
     <% end %>
   </body>
 </html>

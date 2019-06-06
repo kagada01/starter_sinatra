@@ -1,5 +1,5 @@
 require_relative './config/environment'
 
-use CarController
-use OwnerController
+use PlayerController
+use TeamController
 run ApplicationController
